@@ -6,16 +6,19 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="/resources/style/temp.css">
+<script src="/resources/script/js.js"></script>
 </head>
 <body>
 	<div id="wrap">
+	
 	    <div class="imageSec"><img src="/resources/images/Logo.png" alt="로고사진"></div>
 	    
-	<form action="/joinMem.do" method="post">
-		<div class="joinId">
+		<form action="/joinMem.do" method="post" onsubmit="return validateForm(this)">
+		
+			<div class="joinId">
 	        <b>아이디</b>
 	        <input type="text" id="id" name="id">
-	        <input type="button" id="id" value="중복확인">
+	        <%-- <input type="button" id="idChk" value="중복확인"> --%>
 	    </div>
 	
 	    <div class="joinPwd">
@@ -46,20 +49,22 @@
 	
 	    <div class="joinEmail">
 	        <b>이메일</b>
-	        <input type="text">
+	        <input type="text" name="email" id="email">
 	        <em>@</em>
-	        <select name="email" id="email">
+	        <select name="emailSelect">
 	            <option>---선 택---</option>
 	            <option value="naver.com">naver.com</option>
 	            <option value="gmail.com">gmail.com</option>
 	            <option value="daum.net">daum.net</option>
 	            <option value="nate.com">nate.com</option>
 	        </select>
-    	</div>
-    	<input type="submit" value="회원가입 완료">
-	</form>
-	    
-	</div>
+	    </div>
+	    <input type="submit" value="회원가입 완료">
+					
+		</form>
 	
+	
+	</div>
+
 </body>
 </html>

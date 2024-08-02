@@ -9,4 +9,5 @@ public interface UserService {
 	void deleteUser(UserVO vo);
 	
 	UserVO getUser(UserVO vo);
+
 }
