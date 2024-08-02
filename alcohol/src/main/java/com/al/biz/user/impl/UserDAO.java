@@ -18,6 +18,11 @@ public class UserDAO {
 		mybatis = SqlSessionFactoryBean.getSqlSessionInstance();
 	}
 	
+//	 public boolean isIdAvailable(String id) {
+//	        Integer count = sqlSession.selectOne("UserDAO.countUserById", id);
+//	        return count == 0; // 사용 가능한 경우 true 반환
+//	    }
+	
 	
 	// C R U D 부분
 	
