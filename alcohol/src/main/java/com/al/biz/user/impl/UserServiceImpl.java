@@ -41,6 +41,22 @@ public class UserServiceImpl implements UserService {
 		
 		return userDAO.getUser(vo);
 	}
+	
+	@Override
+	public boolean idChk(UserVO vo) {
+		UserVO tempVo = userDAO.idChk(vo);
+		boolean isDup = false;
+		
+		
+		
+		if(tempVo.getId() == null) {
+			isDup = false;
+		}else {
+			isDup = true;
+		}		
+		
+		return isDup;
+	}
 
 }
 

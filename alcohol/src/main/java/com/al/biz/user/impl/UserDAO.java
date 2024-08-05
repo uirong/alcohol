@@ -31,6 +31,15 @@ public class UserDAO {
 		mybatis.insert("UserDAO.insertUser", vo);
 		mybatis.commit(); // 커밋을 통해 sqldata를 온전하게 처리 할 수 있다
 	}
+
+	
+	//idcheck
+	
+	public UserVO idChk(UserVO vo) {
+		return (UserVO)mybatis.selectOne("UserDAO.idChk",vo);
+	}
+	
+	
 	
 	// 수정
 	public void updateUser(UserVO vo) {
