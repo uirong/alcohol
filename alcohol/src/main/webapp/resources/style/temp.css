@@ -58,6 +58,65 @@ input[class*="join"]{
     font-size: 15px; font-weight: 400; color: #666; 
 }
 
+/* * login page fin */
+
+.joinFrm{
+    width: 75%; margin: 0 auto; display: block;
+}
+.joinId input:last-of-type{
+    background-color: #fff; border: 1px solid #7FA8AC; font-size: 16px;
+    color: #7FA8AC; font-weight: 600; padding: 12px 25px; margin-left: 2%;
+}
+
+.joinFrm div[class*="join"] {
+    padding: 25px 10px; margin: 0 auto; display: block;
+}
+.joinId, .joinPwd, .joinPwdChk, .joinName, .joinPhone, .joinAddress, .joinEmail{
+    width: 80%;
+}
+.joinFrm div[class*="join"] b{
+    font-size: 16px; width: 20%; display: inline-block;
+}
+
+.joinPhone>span{
+    display: block; margin-left: 20%; margin-bottom: 5px; color: #666;
+}
+
+.joinEmail em{
+    font-style: normal;
+}
+.joinFrm div[class*="join"]:not(.joinEmail) input:not(#idCheking) {
+    width: 60%; padding: 15px 10px;
+}
+
+.joinEmail input, .joinEmail>select{
+    width: 28%; padding: 15px 10px;
+}
+.joinFrm div[class*="join"] input:not(#idCheking),
+.joinFrm div[class*="join"] select{
+    border: 1.5px solid #7FA8AC; caret-color: #7FA8AC; outline: none;
+}
+.joinFrm>input{
+    width: 50%; margin: 70px auto 120px; display: block;
+    padding: 15px 10px; border: 1px solid #7FA8AC; background-color: #fff;
+    font-size: 18px; font-weight: 600; color: #7FA8AC; height: 80px;
+}
+
+
+.joinId input:last-of-type:hover, .joinFrm>input:hover{
+    background-color: #7FA8AC; color: #fff;
+}
+
+
+/* join Member fine */
+
+
+
+
+
+
+
+
 
 
 

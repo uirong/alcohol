@@ -82,9 +82,11 @@ public class UserController {
 		HttpSession session = request.getSession();
 		
 		String viewName = "/";
-		
+		System.out.println("#####"+vo.getId());
+		System.out.println("#####"+vo.getPwd());
 		vo = userService.getUser(vo);
-		if(vo.getId() == null) {
+		if(vo == null) {
+			session.setAttribute("msg", "회원정보가 존재하지 않습니다");
 			viewName = "redirect:/member/Login.jsp";
 		}else {
 			session.setAttribute("sessId", vo.getId());
@@ -94,6 +96,28 @@ public class UserController {
 		
 		return viewName;
 	}
+	
+	
+	// id chk
+	@RequestMapping(value="/idChk.do")
+	public boolean idChk(UserVO vo) throws IllegalStateException, IOException  {
+		
+		return userService.idChk(vo);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	// 글 수정
 //	@RequestMapping("/updateBoard.do")

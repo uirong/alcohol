@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,5 +26,13 @@
 	</form>
          <span class="noMem"><a href="joinMember.jsp">회원이 아니신가요?</a></span>
     </div>
+    
+   <c:if test="${not empty msg }">
+   		<script>
+   			alert('${msg}');
+   		</script>
+   		
+   		<c:remove var="msg" scope="session" />
+   </c:if>
 </body>
 </html>

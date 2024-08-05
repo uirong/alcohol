@@ -43,6 +43,12 @@
 	
 	<!-- id/pwd 조회 -->
 	<select id="getUser" resultType="user">
-		select * from users where idx=#{idx};
+		select * from users where id=#{id} and pwd=#{pwd} 
 	</select>
+	
+	<!-- id중복 조회 -->
+	<select id="idChk" resultType="user">
+		select * from users where id=#{id};
+	</select>
+	
 </mapper>

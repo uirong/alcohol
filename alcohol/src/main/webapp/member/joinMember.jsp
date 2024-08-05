@@ -5,20 +5,22 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/resources/style/temp.css">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script src="/resources/script/js.js"></script>
+<link rel="stylesheet" href="/resources/style/temp.css">
 </head>
 <body>
+	
 	<div id="wrap">
 	
 	    <div class="imageSec"><img src="/resources/images/Logo.png" alt="로고사진"></div>
 	    
-		<form action="/joinMem.do" method="post" onsubmit="return validateForm(this)">
+		<form class="joinFrm" action="/joinMem.do" method="post" onsubmit="return validateForm(this)">
 		
 			<div class="joinId">
 	        <b>아이디</b>
 	        <input type="text" id="id" name="id">
-	        <%-- <input type="button" id="idChk" value="중복확인"> --%>
+	        <input type="button" id="idCheking" onclick="idCk()" value="중복확인"> 
 	    </div>
 	
 	    <div class="joinPwd">
@@ -65,6 +67,6 @@
 	
 	
 	</div>
-
+	
 </body>
 </html>
